@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh sans', sans-serif;
+}
+
+:root{
+    --primary-bg-color: hsl(185, 75%, 39%);
+    --secondary-bg-color: hsl(229, 23%, 23%);
+    --third-bg-color: hsl(227, 10%, 46%);
+    --neutral-bg-color: hsl(0, 0%, 59%);
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+.section{
+    background: url(./images/bg-pattern-top.svg) top -550px left -320px no-repeat,
+                url(./images/bg-pattern-bottom.svg) bottom -680px right -250px no-repeat;
+    background-color: var(--primary-bg-color);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.section .first{
+    position: absolute;
+    top: -500px;
+    left: -340px;
+}
+
+.section .last{
+    position: absolute;
+    top: 400px;
+    right: -200px;
+}
+
+.section .card{
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.section .card .top{
+    display: block;
+    flex-direction: column;
+}
+
+.section .card .middle .profile{
+    border-radius: 50%;
+    margin-top: -55px;
+    border: 5px solid #ffffff;
+}
+
+.section .card .middle .info{
+    padding: 15px 15px 30px 15px;
+    border-bottom: 1px solid var(--neutral-bg-color);
+}
+
+.section .card .middle .info h3{
+    padding: 0 0 10px 0;
+    color: var(--secondary-bg-color);
+    font-weight: 700;
+}
+
+.section .card .middle .info h3 span{
+    color: var(--third-bg-color);
+    font-weight: 400;
+}
+
+.section .card .middle .info p{
+    color: var(--third-bg-color);
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.section .card .bottom{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 30px;
+}
+
+.section .card .bottom .subs h3{
+    color: var(--secondary-bg-color);
+    font-weight: 700;
+}
+
+.section .card .bottom .subs p{
+    color: var(--third-bg-color);
+    font-weight: 400;
+    font-size: 14px;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 900px){
+    .section{
+        background: url(./images/bg-pattern-top.svg) top -600px left -780px no-repeat,
+                    url(./images/bg-pattern-bottom.svg) bottom -600px right -740px no-repeat;
+        background-color: var(--primary-bg-color);
+    }
+}
+
